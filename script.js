@@ -103,3 +103,55 @@ function questao_3(){
 }
 
 questao_3();
+
+
+function questao_4(){
+
+    let numeros = [];
+
+    for(let i = 1; i <= 4; i++){
+
+        let numero = Number(prompt("Digite um número inteiro " + i));
+
+        while(!Number.isInteger(numero)){
+            numero = Number(prompt("Digite algum número inteiro que seja valido"));
+        }
+
+        numeros.push(numero);
+    }
+
+    for(let i = 0; i < numeros.length; i++){
+        for(let j = 0; j < numeros.length - 1; j++){
+
+            if(numeros[j] < numeros[j+1]){
+
+                let aux = numeros[j];
+                numeros[j] = numeros[j+1];
+                numeros[j+1] = aux;
+            }
+        }
+    }
+    alert("Números em ordem decrescente: " + numeros.join(", "));
+}
+questao_4();
+
+
+
+function questao_5(){
+
+    let numero = Number(prompt("Digite um número inteiro"));
+
+    while(!Number.isInteger(numero)){
+        numero = Number(prompt("Digite algum número inteiro que seja valido"));
+    }
+
+    if(numero % 2 === 0){
+        console.log((numero + 1) + " agora é ímpar");
+    }else{
+        console.log((numero - 1) + " agora é par");
+    }
+
+}
+questao_5();
+
+
