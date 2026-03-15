@@ -155,3 +155,55 @@ function questao_5(){
 questao_5();
 
 
+
+function questao_6(){
+
+    let letra = prompt("Digite uma letra: ");
+    letra = letra.toLowerCase();
+
+    if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+
+        console.log("A letra '" + letra + "' é uma vogal");
+
+    } else{
+
+        console.log("A letra '" + letra + "' é uma consoante");
+
+    }
+
+}
+questao_6();
+
+
+
+function questao_7(){
+
+    const sabores = {
+        a: {nome: "Chocolate", preco: 1.50},
+        b: {nome: "Morango", preco: 2.50},
+        c: {nome: "Creme", preco: 2.50},
+        d: {nome: "Manga", preco: 3.20},
+        e: {nome: "Melancia", preco: 3.40},
+        f: {nome: "Vanilla Ice", preco: 3.00},
+        g: {nome: "Céu Azul", preco: 3.60},
+        h: {nome: "Brownie", preco: 4.00},
+        i: {nome: "Hawaiano", preco: 5.00}
+    };
+
+    let continuar = true;
+
+    while(continuar){
+
+        let codigo = prompt("Digite o código do sabor:").toLowerCase();
+
+        if(sabores[codigo]){
+            alert("Sabor: " + sabores[codigo].nome + 
+                  "\nPreço: R$ " + sabores[codigo].preco);
+        }else{
+            alert("Digite um código válido!");
+        }
+
+        continuar = confirm("Deseja ver outro código?");
+    }
+}
+questao_7();
