@@ -207,3 +207,95 @@ function questao_7(){
     }
 }
 questao_7();
+
+
+function questao_8(){
+
+    let a = Number(prompt("Digite o primeiro número inteiro:"));
+
+    while(!Number.isInteger(a)){
+        a = Number(prompt("Digite um número inteiro válido!"));
+    }
+
+    let b = Number(prompt("Digite o segundo número inteiro:"));
+
+    while(!Number.isInteger(b)){
+        b = Number(prompt("Digite um número inteiro válido!"));
+    }
+
+    let diferenca = a - b;
+    let soma = (2 * a) + (3 * b);
+    let multi = a * b;
+
+    alert("Diferença: " + diferenca);
+    alert("Dobro do primeiro + triplo do segundo: " + soma);
+    alert("Multiplicação: " + multi);
+}
+questao_8();
+
+function questao_9(){
+
+    let numeros = [];
+
+    for(let i = 1; i <= 2; i++){
+
+        let numero = Number(prompt("Digite um número inteiro:"));
+
+        while(!Number.isInteger(numero)){
+            numero = Number(prompt("Digite um número inteiro válido!"));
+        }
+
+        numeros.push(numero);
+    }
+
+    
+    if(numeros[0] < numeros[1]){
+        let aux = numeros[0];
+        numeros[0] = numeros[1];
+        numeros[1] = aux;
+    }
+
+    alert("Números em ordem: " + numeros.join(", "));
+}
+questao_9();
+
+function questao_10(){
+
+    let nome = prompt("Digite o nome do funcionário:");
+    let salario = Number(prompt("Digite o salário bruto:"));
+
+    let desconto = salario * 0.08;
+    let total = salario - desconto;
+
+    alert("Nome: " + nome +
+          "\nSalário bruto: R$ " + salario +
+          "\nDesconto: R$ " + desconto +
+          "\nSalário líquido: R$ " + total);
+}
+questao_10();
+
+function questao_11(){
+
+    let nome = prompt("Digite o nome do funcionário:");
+    let salario = Number(prompt("Digite o salário bruto:"));
+
+    let taxa;
+
+    if(salario <= 1000){
+        taxa = 0.08;
+    }else if(salario < 1500){
+        taxa = 0.085;
+    }else{
+        taxa = 0.09;
+    }
+
+    let desconto = salario * taxa;
+    let total = salario - desconto;
+
+    alert("Nome: " + nome +
+          "\nSalário bruto: R$ " + salario.toFixed(2) +
+          "\nTaxa: " + (taxa * 100) + "%" +
+          "\nDesconto: R$ " + desconto.toFixed(2) +
+          "\nSalário líquido: R$ " + total.toFixed(2));
+}
+questao_11();
