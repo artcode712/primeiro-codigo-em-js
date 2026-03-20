@@ -58,7 +58,7 @@ somarNumeros();
 function questao_2() {
 
     console.log("Contagem regressiva para o lançamento do foguete da NASA!")
-    for (let i = 10; i >= 0; i++) {
+    for (let i = 10; i >= 0; i--) {
         console.log(i);
     }
     {
